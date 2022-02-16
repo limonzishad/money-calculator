@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>money calculator</title>
     <!-- tailwind css cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- vanilla css link -->
@@ -15,17 +15,47 @@
 <body>
     <!-- header -->
     <header>
-
+        <h1 class="text-cyan-700 font-bold text-center text-5xl my-10">Money Calculator</h1>
     </header>
     <!-- main -->
     <main>
-        <!-- first section -->
-        <section>
-
-        </section>
-        <!-- second section -->
-        <section>
-
+        <!-- section -->
+        <section class="grid grid-cols-2 gap-8 w-4/5 mx-auto">
+            <!-- image -->
+            <div class="">
+                <img src="./images/money.png" alt="money.png">
+            </div>
+            <div class="bg-slate-50 flex flex-col justify-items-center items-center py-4">
+                <h2 class="font-bold text-xl">Income</h2>
+                <div class="m-4">
+                    <span>Income: </span><input type="text" placeholder="enter your net income">
+                </div>
+                <h2 class="font-bold text-xl">Expenses</h2>
+                <div class="m-4">
+                    <span>Food: </span><input type="text" placeholder="enter your net income">
+                </div>
+                <div class="m-4">
+                    <span>Rent: </span><input type="text" placeholder="enter your net income">
+                </div>
+                <div class="m-4">
+                    <span>Clothes: </span><input type="text" placeholder="enter your net income">
+                </div>
+                <button class="bg-sky-500 text-white font-medium px-8 py-1 border rounded"
+                    type="submit">Calculate</button>
+                <h2 class="font-bold text-lg">Total Expenses: $<span>00</span></h2>
+                <div class="m-4">
+                    <span>Income: </span><input type="text" placeholder="enter your net income">
+                </div>
+                <h2 class="font-bold text-lg">Balance: $<span>00</span></h2>
+                <div class="m-4">
+                    <span>Save: </span><input type="text" placeholder="enter your net income">
+                    <span>%</span>
+                    <button class="bg-sky-500 text-white font-medium px-8 py-1 border rounded"
+                        type="submit">Calculate</button>
+                </div>
+                <h2 class="font-bold text-lg">Saving Amount: $<span>00</span></h2>
+                <h2 class="font-bold text-lg">Remaining Balance: $<span>00</span></h2>
+            </div>
         </section>
     </main>
     <!-- footer -->
