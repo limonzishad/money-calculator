@@ -25,43 +25,38 @@
             <div class="">
                 <img src="./images/money.png" alt="money.png">
             </div>
+            <!-- input & calculation -->
             <div class="bg-slate-50 flex flex-col justify-items-center items-center py-4">
                 <h2 class="font-bold text-xl">Income</h2>
                 <div class="m-4">
-                    <span>Income: </span><input type="text" placeholder="enter your net income">
+                    <span>Income: </span><input id="total-income" class="" type="number"
+                        placeholder="enter your net income">
                 </div>
                 <h2 class="font-bold text-xl">Expenses</h2>
                 <div class="m-4">
-                    <span>Food: </span><input type="text" placeholder="enter your net income">
+                    <span>Food: </span><input id="food-expense" type="number" placeholder="enter your net income">
                 </div>
                 <div class="m-4">
-                    <span>Rent: </span><input type="text" placeholder="enter your net income">
+                    <span>Rent: </span><input id="rent-expense" type="number" placeholder="enter your net income">
                 </div>
                 <div class="m-4">
-                    <span>Clothes: </span><input type="text" placeholder="enter your net income">
+                    <span>Clothes: </span><input id="cloth-expense" type="number" placeholder="enter your net income">
                 </div>
-                <button class="bg-sky-500 text-white font-medium px-8 py-1 border rounded"
+                <button id="calculation" class="bg-sky-500 text-white font-medium px-8 py-1 border rounded mb-2"
                     type="submit">Calculate</button>
-                <h2 class="font-bold text-lg">Total Expenses: $<span>00</span></h2>
+                <h2 class="font-bold mb-2 text-lg">Total Expenses: <span id="new-total-expense">00</span></h2>
+                <h2 class="font-bold text-lg">Balance: <span id="new-balance">00</span></h2>
                 <div class="m-4">
-                    <span>Income: </span><input type="text" placeholder="enter your net income">
-                </div>
-                <h2 class="font-bold text-lg">Balance: $<span>00</span></h2>
-                <div class="m-4">
-                    <span>Save: </span><input type="text" placeholder="enter your net income">
+                    <span>Save: </span><input type="number" placeholder="enter your net income">
                     <span>%</span>
                     <button class="bg-sky-500 text-white font-medium px-8 py-1 border rounded"
-                        type="submit">Calculate</button>
+                        type="submit">Save</button>
                 </div>
-                <h2 class="font-bold text-lg">Saving Amount: $<span>00</span></h2>
-                <h2 class="font-bold text-lg">Remaining Balance: $<span>00</span></h2>
+                <h2 class="font-bold mb-2 text-lg">Saving Amount: <span>00</span></h2>
+                <h2 class="font-bold text-lg">Remaining Balance: <span>00</span></h2>
             </div>
         </section>
     </main>
-    <!-- footer -->
-    <footer>
-
-    </footer>
     <!-- js link -->
     <script src="./js/main.js"></script>
 </body>
