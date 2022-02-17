@@ -20,7 +20,7 @@
     <!-- main -->
     <main>
         <!-- section -->
-        <section class="grid grid-cols-2 gap-8 w-4/5 mx-auto">
+        <section class="grid grid-cols-2 gap-8 items-center mx-12">
             <!-- image -->
             <div>
                 <img src="./images/money.png" class="border rounded" alt="money.png">
@@ -28,42 +28,49 @@
             <!-- input & calculation -->
             <div class="bg-slate-50 py-4 flex flex-col justify-items-center items-center border rounded">
                 <h2 class="font-bold text-xl">Income</h2>
-                <div class="m-4">
+                <div class="m-2">
                     <label>Income:</label>
-                    <input id="total-income" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                    <input id="total-income" type="text" class="text-center w-2/4 py-1 border rounded border-sky-500"
                         placeholder="your income">
+                    <p id="wrong-income-input"></p>
                 </div>
                 <h2 class="font-bold text-xl">Expenses</h2>
-                <div class="m-4">
+                <div class="m-2">
                     <label>Food:</label>
-                    <input id="food-expense" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                    <input id="food-expense" type="text" class="text-center w-2/4 py-1 border rounded border-sky-500"
                         placeholder="food expense">
+                    <p id="wrong-food-input"></p>
                 </div>
-                <div class="m-4">
+                <div class="m-2">
                     <label>Rent:</label>
-                    <input id="rent-expense" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                    <input id="rent-expense" type="text" class="text-center w-2/4 py-1 border rounded border-sky-500"
                         placeholder="rent expense">
+                    <p id="wrong-rent-input"></p>
                 </div>
-                <div class="m-4">
+                <div class="m-2">
                     <label>Clothes:</label>
-                    <input id="cloth-expense" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                    <input id="cloth-expense" type="text" class="text-center w-2/4 py-1 border rounded border-sky-500"
                         placeholder="cloth expense">
+                    <p id="wrong-cloth-input"></p>
                 </div>
                 <button id="calculate-button"
                     class="bg-sky-500 font-medium px-8 py-1 border rounded mb-2 hover:bg-white border-4 border-sky-500 text-black"
-                    type="submit">Calculate</button>
+                    type="button">Calculate</button>
                 <h2 class="font-bold mb-2 text-lg">TOTAL EXPENSES: <span id="new-total-expense">00</span></h2>
+                <p id="expense-error-massage"></p>
                 <h2 class="font-bold text-lg">BALANCE: <span id="new-balance">00</span></h2>
-                <div class="m-4 flex flex-row items-center">
+                <div class="m-2 flex flex-row items-center">
                     <label>Save:</label>
-                    <input id="save-amount" type="number" class="text-center w-1/4 py-1 border rounded border-sky-500"
+                    <input id="save-amount" type="text" class="text-center w-1/4 py-1 border rounded border-sky-500"
                         placeholder="amount">
                     <span>&nbsp;%&nbsp;</span>
                     <button id="save-button"
                         class="bg-sky-500 font-medium px-8 py-1 border rounded hover:bg-white border-4 border-sky-500 text-black"
-                        type="submit">Save</button>
+                        type="button">Save</button>
                 </div>
+                <p id="wrong-saving-input"></p>
                 <h2 class="font-bold mb-2 text-lg">SAVINGS AMOUNT: <span id="total-save">00</span></h2>
+                <p id="save-error-massage"></p>
                 <h2 class="font-bold text-lg">REMAINING BALANCE: <span id="balance-remain">00</span></h2>
             </div>
         </section>
