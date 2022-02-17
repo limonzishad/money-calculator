@@ -24,14 +24,14 @@ function updateAmount(fieldId, amount) {
 function errorMassage(wrongInput) {
     const errorMassage = document.getElementById(wrongInput);
     const previousErrorMassage = errorMassage.innerText;
-    errorMassage.innerText = 'wrong input';
+    errorMassage.innerText = 'field empty or wrong input';
     return errorMassage;
 }
 // error massage function 2
 function errorMassage2(errorMassageField) {
     const errorMassage2 = document.getElementById(errorMassageField);
     const previousErrorMassage = errorMassage2.innerText;
-    errorMassage2.innerText = "can't expense/save more than income";
+    errorMassage2.innerText = "can't expense or save more than income";
     return errorMassage2;
 }
 //clear error massage
@@ -48,39 +48,39 @@ document.getElementById('calculate-button').addEventListener('click', function (
     const rentExpense = valueFromInputField('rent-expense');
     const clothExpense = valueFromInputField('cloth-expense');
     // check input
-    if (netIncome < 0) {
+    if (netIncome < 0 || isNaN(netIncome)) {
         errorMassage('wrong-income-input');
     }
     else {
         clearErrorMassage('wrong-income-input');
     }
-    if (foodExpense < 0) {
+    if (foodExpense < 0 || isNaN(foodExpense)) {
         errorMassage('wrong-food-input');
     }
     else {
         clearErrorMassage('wrong-food-input');
     }
-    if (rentExpense < 0) {
+    if (rentExpense < 0 || isNaN(rentExpense)) {
         errorMassage('wrong-rent-input');
     }
     else {
         clearErrorMassage('wrong-rent-input');
     }
-    if (clothExpense < 0) {
+    if (clothExpense < 0 || isNaN(clothExpense)) {
         errorMassage('wrong-cloth-input');
     }
     else {
         clearErrorMassage('wrong-cloth-input');
     }
     const updatedTotalExpense = foodExpense + rentExpense + clothExpense;
-    if (netIncome >= updatedTotalExpense || updatedTotalExpense == 0) {
+    if (updatedTotalExpense > netIncome) {
+        errorMassage2('expense-error-massage');
+    }
+    else {
+        clearErrorMassage('expense-error-massage');
         updateAmount('new-total-expense', updatedTotalExpense);
         const updatedBalance = netIncome - updatedTotalExpense;
         updateAmount('new-balance', updatedBalance);
-        clearErrorMassage('expense-error-massage');
-    }
-    else {
-        errorMassage2('expense-error-massage');
     }
 });
 // save button
@@ -89,7 +89,7 @@ document.getElementById('save-button').addEventListener('click', function () {
     const totalBalanceField = document.getElementById('new-balance');
     const totalBalanceText = totalBalanceField.innerText;
     const totalBalance = parseFloat(totalBalanceText);
-    if (saveAmount < 0) {
+    if (saveAmount < 0 || isNaN(saveAmount)) {
         errorMassage('wrong-saving-input');
     }
     else {
