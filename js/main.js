@@ -3,7 +3,6 @@ function valueFromInputField(inputTextId) {
     const inputText = document.getElementById(inputTextId);
     const inputValue = inputText.value;
     const changeInputValue = parseFloat(inputValue);
-    inputText.value = '';
     return changeInputValue;
 }
 // balance calculation

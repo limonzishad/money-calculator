@@ -22,38 +22,49 @@
         <!-- section -->
         <section class="grid grid-cols-2 gap-8 w-4/5 mx-auto">
             <!-- image -->
-            <div class="">
-                <img src="./images/money.png" alt="money.png">
+            <div>
+                <img src="./images/money.png" class="border rounded" alt="money.png">
             </div>
             <!-- input & calculation -->
-            <div class="bg-slate-50 flex flex-col justify-items-center items-center py-4">
+            <div class="bg-slate-50 py-4 flex flex-col justify-items-center items-center border rounded">
                 <h2 class="font-bold text-xl">Income</h2>
                 <div class="m-4">
-                    <span>Income: </span><input id="total-income" class="" type="number"
-                        placeholder="enter your net income">
+                    <label>Income:</label>
+                    <input id="total-income" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                        placeholder="your income">
                 </div>
                 <h2 class="font-bold text-xl">Expenses</h2>
                 <div class="m-4">
-                    <span>Food: </span><input id="food-expense" type="number" placeholder="enter your net income">
+                    <label>Food:</label>
+                    <input id="food-expense" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                        placeholder="food expense">
                 </div>
                 <div class="m-4">
-                    <span>Rent: </span><input id="rent-expense" type="number" placeholder="enter your net income">
+                    <label>Rent:</label>
+                    <input id="rent-expense" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                        placeholder="rent expense">
                 </div>
                 <div class="m-4">
-                    <span>Clothes: </span><input id="cloth-expense" type="number" placeholder="enter your net income">
+                    <label>Clothes:</label>
+                    <input id="cloth-expense" type="number" class="text-center w-2/4 py-1 border rounded border-sky-500"
+                        placeholder="cloth expense">
                 </div>
-                <button id="calculate-button" class="bg-sky-500 text-white font-medium px-8 py-1 border rounded mb-2"
+                <button id="calculate-button"
+                    class="bg-sky-500 font-medium px-8 py-1 border rounded mb-2 hover:bg-white border-4 border-sky-500 text-black"
                     type="submit">Calculate</button>
-                <h2 class="font-bold mb-2 text-lg">Total Expenses: <span id="new-total-expense">00</span></h2>
-                <h2 class="font-bold text-lg">Balance: <span id="new-balance">00</span></h2>
-                <div class="m-4">
-                    <span>Save: </span><input id="save-amount" type="number" placeholder="enter your net income">
-                    <span>%</span>
-                    <button id="save-button" class="bg-sky-500 text-white font-medium px-8 py-1 border rounded"
+                <h2 class="font-bold mb-2 text-lg">TOTAL EXPENSES: <span id="new-total-expense">00</span></h2>
+                <h2 class="font-bold text-lg">BALANCE: <span id="new-balance">00</span></h2>
+                <div class="m-4 flex flex-row items-center">
+                    <label>Save:</label>
+                    <input id="save-amount" type="number" class="text-center w-1/4 py-1 border rounded border-sky-500"
+                        placeholder="amount">
+                    <span>&nbsp;%&nbsp;</span>
+                    <button id="save-button"
+                        class="bg-sky-500 font-medium px-8 py-1 border rounded hover:bg-white border-4 border-sky-500 text-black"
                         type="submit">Save</button>
                 </div>
-                <h2 class="font-bold mb-2 text-lg">Saving Amount: <span id="total-save">00</span></h2>
-                <h2 class="font-bold text-lg">Remaining Balance: <span id="balance-remain">00</span></h2>
+                <h2 class="font-bold mb-2 text-lg">SAVINGS AMOUNT: <span id="total-save">00</span></h2>
+                <h2 class="font-bold text-lg">REMAINING BALANCE: <span id="balance-remain">00</span></h2>
             </div>
         </section>
     </main>
