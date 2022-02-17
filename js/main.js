@@ -72,10 +72,10 @@ document.getElementById('calculate-button').addEventListener('click', function (
     else {
         clearErrorMassage('wrong-cloth-input');
         const updatedTotalExpense = foodExpense + rentExpense + clothExpense;
-        if (updatedTotalExpense > netIncome) {
+        if (updatedTotalExpense > netIncome || updatedTotalExpense < 0) {
             errorMassage2('expense-error-massage');
         }
-        else {
+        else if (updatedTotalExpense >= 0 && netIncome > updatedTotalExpense) {
             clearErrorMassage('expense-error-massage');
             updateAmount('new-total-expense', updatedTotalExpense);
             const updatedBalance = netIncome - updatedTotalExpense;
